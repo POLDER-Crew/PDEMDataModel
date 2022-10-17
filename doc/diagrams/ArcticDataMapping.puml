@@ -1,0 +1,116 @@
+@startuml
+
+skinparam monochrome true
+'left to right direction
+
+object "ArcticDataEcosystem" as ade {
+    analysisPurpose 
+}
+
+map "analysisPurpose" as pu {
+1 => Active data centres
+2 => Interaction between data centres
+3 => Technology usage
+4 => Other
+}
+
+ade --> pu
+
+object "mappingElement" as me {
+    identifier = "UUID"
+    dateUpdated = "ISO8601"
+    authorName = ""
+    authorEmail = ""
+}
+
+map "aggregatorRepository" as agg {
+    name => "name of the repository"
+    url => "URL"
+    country => "ISO 3166-1 alpha-2"
+}
+
+map "harvestStatus" as hs {
+    1 => In planning
+    2 => At present
+    3 => In past
+    4 => It is complicated
+}
+
+map "harvestFrequency" as hf {
+    1 => Daily
+    2 => Weekly
+    3 => Monthly
+    4 => Incremental/full
+    5 => Manual
+    6 => Other
+}
+
+map "harvestEviction" as he {
+    1 => Daily
+    2 => Daily
+    3 => Weekly
+    4 => Monthly
+    5 => Quarterly
+}
+
+map "harvestProtocol" as hp {
+    1 => OAI-PMH
+    2 => OGC CSW
+    3 => OpenSearch
+    4 => DCAT-AP
+    5 => Other
+}
+
+map "harvestMetadata" as hm {
+    1 => GCMD DIF
+    2 => ISO19115 (various profiles)
+    3 => schema.org
+    4 => DCAT-AP
+    5 => Other
+}
+
+map "harvestContent" as hc {
+    1 => Full
+    2 => Subset
+    3 => Other
+}
+
+map "dataAccess" as da {
+    1 => DirectSingleFileDownLoad
+    2 => OPeNDAP
+    3 => OGC WMS
+    4 => OGC WFS
+    5 => OGC WCS
+    6 => OGC API
+    7 => ODATA
+    8 => Other
+}
+
+map "harvestProfile" as hpf {
+    harvestStatus *-> hs
+    harvestFrequency *-> hf
+    harvestEviction *-> he
+    harvestProtocol *-> hp
+    harvestMetadata *-> hm
+    harvestContent *-> hc
+    harvestNotes => Free text
+    dataAccess *-> da 
+}
+
+map "sourceRepository" as src {
+    name => name of the repository
+    url => URL
+    country => "ISO 3166-1 alpha-2"
+}
+
+ade *-- "0,*" me
+me o-- "1" agg
+me o-- "1" src
+agg o-- "0,*" hpf
+
+hs -[hidden]d- hf
+hf -[hidden]d- hm
+hc -[hidden]d- hp
+hp -[hidden]d- da
+
+@enduml

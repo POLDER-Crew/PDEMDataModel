@@ -1,0 +1,61 @@
+:doctype: article
+:pdf-folio-placement: physical
+:media: prepress
+:sectnums:
+:sectlevels: 7
+:sectanchors:
+:toc: macro
+:toclevels: 7
+:chapter-label:
+:xrefstyle: short
+:revnumber: 0.0
+:revdate: {docdate}
+:revremark: First version
+:title-page:
+
+= FIXME
+Date: {docdate}
+
+<<<
+
+:title-page:
+
+<<<
+
+toc::[]
+
+<<<
+
+[discrete]
+== Versions
+
+[cols="1,1,3,1",]
+|=======================================================================
+|Version |Date |Comment |Responsible
+
+|0.x |202?-??-??|Many updates... a| Øystein Godøy
+
+|0.0 |2022-??-?? |First draft for internal discussion. |Øystein Godøy
+|=======================================================================
+
+
+[[introduction]]
+== Introduction
+
+FIXME
+
+[[background]]
+=== Background
+
+FIXME
+
+[[scope]]
+=== Scope
+
+FIXME
+
+[[intended-audience]]
+=== Intended audience
+
+FIXME
+
