@@ -5,9 +5,7 @@ on:
     branches:
       - master
     paths:
-      - 'D2p1-UserManual/**'
-      - 'D2p2-OperationsManual/**'
-      - 'CVLComponentsandInterfaces/**'
+      - 'doc/**'
 jobs:
   adoc_build:
     runs-on: ubuntu-latest
