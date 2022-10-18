@@ -1,7 +1,7 @@
 @startuml
 
 skinparam monochrome true
-'left to right direction
+left to right direction
 
 object "ArcticDataEcosystem" as ade {
     analysisPurpose 
