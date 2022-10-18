@@ -35,7 +35,7 @@ toc::[]
 
 |0.x |202?-??-??|Many updates... a| Øystein Godøy
 
-|0.0 |2022-??-?? |First draft for internal discussion. |Øystein Godøy
+|0.0 |2022-10-18 |First draft for internal discussion. |Øystein Godøy
 |=======================================================================
 
 
