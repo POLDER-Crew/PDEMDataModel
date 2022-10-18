@@ -30,5 +30,3 @@ Vagrant.configure("2") do |config|
     docker-compose -f docker-compose.asciidoctor.yml up --build
   SHELL
 end
-
-

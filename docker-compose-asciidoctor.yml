@@ -16,3 +16,11 @@ services:
     volumes:
       - ./doc:/workdir
     command: asciidoctor-pdf -a pdf-themesdir=./ -a pdf-theme=pdem -n pdem-datamodel.adoc
+
+  puml:
+    build:
+      context: .
+      dockerfile: Dockerfile.asciidoctor
+    volumes:
+      - ./doc/diagrams:/workdir
+    command: plantuml ArcticDataMapping.puml 
