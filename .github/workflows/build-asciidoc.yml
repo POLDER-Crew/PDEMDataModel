@@ -9,12 +9,12 @@ on:
 jobs:
   adoc_build:
     runs-on: ubuntu-latest
-    name: Asciidoctoring the docs to PDF and HTML
+    name: Asciidoctoring the docs to PDF and HTML, and creating diagrams
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Build PDF and HTML
+    - name: Build diagrams, PDF and HTML
       run: docker-compose -f docker-compose-asciidoctor.yml up
 
     - name: Commit changed files
@@ -23,6 +23,7 @@ jobs:
         git config --local user.name "GitHub Action"
         git add -f doc/pdem-datamodel.pdf
         git add -f doc/pdem-datamodel.html
+        git add -f doc/diagrams/ArcticDataMapping.png
         git commit -m "Automatic updated by GitHub Action"
 
     - name: push code to ${{ github.ref }}
