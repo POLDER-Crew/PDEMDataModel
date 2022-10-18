@@ -60,3 +60,11 @@ FIXME
 FIXME
 
 == Data model
+
+=== Introduction
+
+FIXME
+
+=== Diagram
+
+image::diagrams/ArcticDataMapping.png[]
