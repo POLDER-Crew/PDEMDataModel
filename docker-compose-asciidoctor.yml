@@ -23,4 +23,4 @@ services:
       dockerfile: Dockerfile.asciidoctor
     volumes:
       - ./doc/diagrams:/workdir
-    command: plantuml ArcticDataMapping.puml 
+    command: plantuml_build png -R ./ ./ 
