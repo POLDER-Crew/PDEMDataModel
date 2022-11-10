@@ -1,26 +1,14 @@
 version: '3.4'
 
 services:
-  html:
+  full:
     build:
       context: .
       dockerfile: Dockerfile.asciidoctor
     volumes:
       - ./doc:/workdir
-    command: asciidoctor -n pdem-datamodel.adoc
-
-  pdf:
-    build:
-      context: .
-      dockerfile: Dockerfile.asciidoctor
-    volumes:
-      - ./doc:/workdir
-    command: asciidoctor-pdf -a pdf-themesdir=./ -a pdf-theme=pdem -n pdem-datamodel.adoc
-
-  puml:
-    build:
-      context: .
-      dockerfile: Dockerfile.asciidoctor
-    volumes:
-      - ./doc/diagrams:/workdir
-    command: plantuml_build png -R ./ ./ 
+    command: >
+      sh -c "if [ -f ./diagrams/ArcticDataMapping.png ]; then rm ./diagrams/ArcticDataMapping.png; fi && 
+             plantuml_build png -R ./diagrams ./diagrams &&
+             asciidoctor -n pdem-datamodel.adoc && 
+             asciidoctor-pdf -a pdf-themesdir=./ -a pdf-theme=pdem -n pdem-datamodel.adoc"

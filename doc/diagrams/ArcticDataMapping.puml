@@ -105,7 +105,7 @@ map "sourceRepository" as src {
 
 ade *-- "0,*" me
 me o-- "1" agg
-me o-- "1" src
+hpf o-- "1" src
 agg o-- "0,*" hpf
 
 hs -[hidden]d- hf
