@@ -47,7 +47,6 @@ map "harvestFrequency" as hf {
 
 map "harvestEviction" as he {
     1 => Daily
-    2 => Daily
     3 => Weekly
     4 => Monthly
     5 => Quarterly
