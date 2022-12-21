@@ -93,7 +93,8 @@ map "harvestProfile" as hpf {
     harvestMetadata *-> hm
     harvestContent *-> hc
     harvestNotes => Free text
-    dataAccess *-> da 
+    dataAccess *-> da
+    lastValidated => Date last validated
 }
 
 map "sourceRepository" as src {
