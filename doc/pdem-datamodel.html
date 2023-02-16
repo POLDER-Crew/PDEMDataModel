@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.18">
-<meta name="author" content="Date: 2023-01-04">
+<meta name="author" content="Date: 2023-02-16">
 <title>Polar Data Ecosystem Mapping Data Model</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
@@ -441,9 +441,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="header">
 <h1>Polar Data Ecosystem Mapping Data Model</h1>
 <div class="details">
-<span id="author" class="author">Date: 2023-01-04</span><br>
+<span id="author" class="author">Date: 2023-02-16</span><br>
 <span id="revnumber">version 0.0,</span>
-<span id="revdate">2023-01-04</span>
+<span id="revdate">2023-02-16</span>
 <br><span id="revremark">First version</span>
 </div>
 </div>
@@ -479,55 +479,71 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <col style="width: 50%;">
 <col style="width: 16.6668%;">
 </colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Version</th>
-<th class="tableblock halign-left valign-top">Date</th>
-<th class="tableblock halign-left valign-top">Comment</th>
-<th class="tableblock halign-left valign-top">Responsible</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0.x</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">202?-??-??</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Many updates&#8230;&#8203;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Version</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Date</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comment</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Responsible</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2023-02-16</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">First consolidated draft.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Øystein Godøy</p>
+<p>Øystein Godøy, Brendan Billingsley</p>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0.0</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0.0</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">2022-10-18</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">First draft for internal discussion.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Øystein Godøy</p></td>
 </tr>
 </tbody>
 </table>
+<div style="page-break-after: always;"></div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="introduction"><a class="anchor" href="#introduction"></a>1. Introduction</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>FIXME</p>
-</div>
 <div class="sect2">
 <h3 id="background"><a class="anchor" href="#background"></a>1.1. Background</h3>
 <div class="paragraph">
-<p>FIXME</p>
+<p>During the <a href="https://arcticdc.org/meetings/conferences/polar-data-planning-summit">Polar Data Planning Summit</a> which was arranged May 22 - 24, 2018 in Boulder, Colorado, USA, an effort was initiated to map the ecosystem of Polar data centres and how these interacted exchanging discovery metadata.
+This effort was further elaborated in the <a href="https://arcticdc.org/meetings/conferences/polar-data-architecture-workshop">Polar Data and Systems Architecture Workshop</a> which was arranged November 28-30, 2018 in Geneva, Switzerland.
+These two meetings resulted in a spreadsheet describing interactions between data centres (i.e. who was harvesting information from whom), information which interoperability standards that were used etc.</p>
+</div>
+<div class="paragraph">
+<p>This spreadsheet has since been developed in the joint working group on <a href="https://arcticdc.org/activities/core-projects/federated-search">Federated Search for Polar Regions</a> and in joint the <a href="https://arcticdc.org/activities/core-projects/vocabularies-and-semantics-wg">Polar Semantics Working Group</a>.
+Different aspects have been emphasised in these groups.</p>
+</div>
+<div class="paragraph">
+<p>In order to simplify analysis of the content of the spreadsheet, it was ingested into a graph database and an application for analysis of relationships was developed (<a href="#mpde-mapping">Figure 1</a>).
+This application has evolved through a number of projects and now is in the progress of supporting multiple use cases on interactions between data centres in the Polar regions.
+As the number of use cases have increased and the spreadsheet has grown in size it has become evident that managing this information in a spreadsheet is not sustainable.
+In order to have a solid basis for further development of the mapping activity and furthermore to move maintenance of information into a suitable system, it was decided to develop a data model for the application.
+This data model should support a wide variety of use cases as well as also support efficient and transparent maintenance of the information collected.
+In the process of establishing this data model it has been decided that the content should be available under CC-BY-4.0 license.</p>
+</div>
+<div id="mpde-mapping" class="imageblock">
+<div class="content">
+<img src="illustrations/mpde-screenshot.png" alt="mpde screenshot">
+</div>
+<div class="title">Figure 1. Screenshot of the current version of Mapping the Polar Data Ecosystem (MPDE) application.</div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="scope"><a class="anchor" href="#scope"></a>1.2. Scope</h3>
 <div class="paragraph">
-<p>FIXME</p>
+<p>This document describes the data model and provides explanations to the various elements.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="intended-audience"><a class="anchor" href="#intended-audience"></a>1.3. Intended audience</h3>
 <div class="paragraph">
-<p>FIXME</p>
+<p>The intended audience is people interested in the mapping activity and development of the federated search/unified data catalogue for polar data.</p>
 </div>
 </div>
 </div>
@@ -538,16 +554,154 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="_introduction"><a class="anchor" href="#_introduction"></a>2.1. Introduction</h3>
 <div class="paragraph">
-<p>FIXME</p>
+<p>The purpose of the data model is to ensure that the necessary information to establish a proper understanding of relationships between data centres, interoperability technologies used and the evolution of relationships is captured in a consistent manner.
+The data model should help the community to answer questions like (non exhaustive list):</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Which data centres manages polar data?</dt>
+<dd>
+<p>Where are polar relevant data managed and how are these data made available to the community?</p>
+</dd>
+<dt class="hdlist1">Which data centres acts as aggregators?</dt>
+<dd>
+<p>Some data centres aggregates information from other data centres to provide services to their user communities.
+Which are these data centres and how do they interact?</p>
+</dd>
+<dt class="hdlist1">Which interoperability technologies are used?</dt>
+<dd>
+<p>Which technologies are actively used to exchange discovery information, but also to convey information about the data.</p>
+</dd>
+<dt class="hdlist1">Which information containers are used for discovery level information??</dt>
+<dd>
+<p>Exchange of discovery metadata is the core functionality supporting federated search or unified virtual data catalogues.
+Which information containers are used as well as which semantic annotation is used to describe the contents of data (e.g. variables) and exchange mechanisms (e.g. purpose of URL&#8217;s in discovery metadata).</p>
+</dd>
+</dl>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_diagram"><a class="anchor" href="#_diagram"></a>2.2. Diagram</h3>
-<div class="imageblock">
+<div class="paragraph">
+<p>The data model for the polar data ecosystem mapping activity is outlined in <a href="#data-model">Figure 2</a>.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">analysisPurpose</dt>
+<dd>
+<p>The core element in the data model is the "analysisPurpose".
+This should indicate that the underlying data are suitable for answering a number of use cases.
+Each <code>analysisPurpose</code> will contain 1 or more <code>mappingElement</code>.
+Currently the following keywords have been defined:</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Active data centres</dt>
+<dd>
+<p>These are the data centres managing polar data.</p>
+</dd>
+<dt class="hdlist1">Interaction between data centres</dt>
+<dd>
+<p>These data centres acts as aggregators in the ecosystem of data centres.</p>
+</dd>
+<dt class="hdlist1">Technology usage</dt>
+<dd>
+<p>These interoperability technologies are actively used for either discovery or access/retrieval purposes.</p>
+</dd>
+<dt class="hdlist1">Other</dt>
+<dd>
+<p>Other use cases, not strictly specified.</p>
+</dd>
+</dl>
+</div>
+</dd>
+<dt class="hdlist1">mappingElement</dt>
+<dd>
+<p>Each <code>mappingElement</code> describes a relation between data centres.
+In order to track the information over time, the element has a number of attributes.
+A unique internal <code>identifier</code> which is used to separate <code>mappingElement</code> elements from each other.
+The time this information was last updated in <code>dateUpdated</code>, this information is captured following ISO8601.
+And name and email of the person providing the updated information in <code>authorName</code> and <code>authorEmail</code>.
+Each <code>mappingElement</code> contain 1 <code>aggregatorRepository</code> element.</p>
+</dd>
+<dt class="hdlist1">aggregatorRepository</dt>
+<dd>
+<p>This describes a repository that is harvesting information from other data repositories.
+For each repository the name, url and country (respective attributes are <code>name</code>, <code>url</code> and <code>country</code>) is needed to support the top level use cases.
+The <code>url</code> should be the landing/front page of the repository.
+Each <code>aggregatorRepository</code> element will have 0 or elements of type <code>harvestProfile</code> that describes the relations and technologies used. Each <code>harvestProfile</code> of an <code>aggregatorRepository</code> is linked with a <code>sourceRepository</code>.</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">harvestProfile</dt>
+<dd>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">harvestStatus</dt>
+<dd>
+<p>States whether the repository is actively harvested, has been in the past or is in planning.
+See <a href="#data-model">Figure 2</a> for details.</p>
+</dd>
+<dt class="hdlist1">harvestFrequency</dt>
+<dd>
+<p>How often are the information retrieved by the aggregator.
+See <a href="#data-model">Figure 2</a> for details.</p>
+</dd>
+<dt class="hdlist1">harvestEviction</dt>
+<dd>
+<p>Describes how often the aggregator evict all information harvested and do a clean full harvest again.
+See <a href="#data-model">Figure 2</a> for details.</p>
+</dd>
+<dt class="hdlist1">harvestProtocol</dt>
+<dd>
+<p>Identifies the interoperability protocol used to exchange information on discovery metadata between the source and the aggregator.
+The link between a aggregator and a source is only one protocol, but a source may be harvested using different protocols by different aggregators.
+See <a href="#data-model">Figure 2</a> for details.</p>
+</dd>
+<dt class="hdlist1">harvestMetadata</dt>
+<dd>
+<p>The discovery metadata standard the aggregator is retrieving from the source.
+See <a href="#data-model">Figure 2</a> for details.</p>
+</dd>
+<dt class="hdlist1">harvestContent</dt>
+<dd>
+<p>Indicates if incremental or full harvests are used.
+This should be interpreted in combination with <code>harvestFrequency</code>.</p>
+</dd>
+<dt class="hdlist1">harvestNotes</dt>
+<dd>
+<p>Any comment added as free text supporting the understanding of the relation between the aggregator and the source.</p>
+</dd>
+<dt class="hdlist1">dataAccess</dt>
+<dd>
+<p>Indicates which mechanisms an aggregator is using to integrate the data provided by the source in the service portfolio of the aggregator.
+Typically this can be multiple elements for each aggregator/source linkage.
+This will be a list.</p>
+</dd>
+<dt class="hdlist1">lastValidated</dt>
+<dd>
+<p>Information on when the current content of the harvesting was confirmed by the aggregator.
+Also using ISO8601.</p>
+</dd>
+</dl>
+</div>
+</dd>
+<dt class="hdlist1">sourceRepository</dt>
+<dd>
+<p>This describes the data repository that is being harvested by the <code>aggregatorRepository</code>.
+The information provided for this element is the same as for the <code>aggregatorRepository</code> (i.e. name, url, country), but the information on metadata standards, protocols etc in <code>harvestProfile</code> reflects the services offered by the <code>sourceRepository</code> as they are actively utilised by the aggregator.</p>
+</dd>
+</dl>
+</div>
+</dd>
+</dl>
+</div>
+<div style="page-break-after: always;"></div>
+<div id="data-model" class="imageblock">
 <div class="content">
 <img src="diagrams/ArcticDataMapping.png" alt="ArcticDataMapping">
 </div>
+<div class="title">Figure 2. Data model for the polar data ecosystem mapping activity.</div>
 </div>
+<div style="page-break-after: always;"></div>
 </div>
 </div>
 </div>
@@ -555,7 +709,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="footer">
 <div id="footer-text">
 Version 0.0<br>
-Last updated 2023-01-04 18:11:48 UTC
+Last updated 2023-02-16 21:14:24 UTC
 </div>
 </div>
 </body>
