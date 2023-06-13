@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.18">
-<meta name="author" content="Date: 2023-02-16">
+<meta name="generator" content="Asciidoctor 2.0.20">
+<meta name="author" content="Date: 2023-06-13">
 <title>Polar Data Ecosystem Mapping Data Model</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
@@ -209,13 +209,10 @@ table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
 .admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6);word-wrap:anywhere}
 .admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
 .exampleblock>.content{border:1px solid #e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;border-radius:4px}
-.exampleblock>.content>:first-child{margin-top:0}
-.exampleblock>.content>:last-child{margin-bottom:0}
 .sidebarblock{border:1px solid #dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;border-radius:4px}
-.sidebarblock>:first-child{margin-top:0}
-.sidebarblock>:last-child{margin-bottom:0}
 .sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
-.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content>:first-child,.sidebarblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child,.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
 .literalblock pre,.listingblock>.content>pre{border-radius:4px;overflow-x:auto;padding:1em;font-size:.8125em}
 @media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
 @media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
@@ -394,7 +391,7 @@ b.conum *{color:inherit!important}
 dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
 h1,h2,p,td.content,span.alt,summary{letter-spacing:-.01em}
 p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
-p,blockquote,dt,td.content,span.alt,summary{font-size:1.0625rem}
+p,blockquote,dt,td.content,td.hdlist1,span.alt,summary{font-size:1.0625rem}
 p{margin-bottom:1.25rem}
 .sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
 .exampleblock>.content{background:#fffef7;border-color:#e0e0dc;box-shadow:0 1px 4px #e0e0dc}
@@ -441,9 +438,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="header">
 <h1>Polar Data Ecosystem Mapping Data Model</h1>
 <div class="details">
-<span id="author" class="author">Date: 2023-02-16</span><br>
+<span id="author" class="author">Date: 2023-06-13</span><br>
 <span id="revnumber">version 0.0,</span>
-<span id="revdate">2023-02-16</span>
+<span id="revdate">2023-06-13</span>
 <br><span id="revremark">First version</span>
 </div>
 </div>
@@ -511,9 +508,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="background"><a class="anchor" href="#background"></a>1.1. Background</h3>
 <div class="paragraph">
-<p>During the <a href="https://arcticdc.org/meetings/conferences/polar-data-planning-summit">Polar Data Planning Summit</a> which was arranged May 22 - 24, 2018 in Boulder, Colorado, USA, an effort was initiated to map the ecosystem of Polar data centres and how these interacted exchanging discovery metadata.
+<p>The Mapping the Polar Data Ecosystem Project grew from the Mapping the Arctic Data Ecosystem Project that was initiated by the Arctic Data Committee in November of 2014.  Since then, the project has eveloved to include multiple themes using a series of tools.  One of those themes is focused on understanding how the community shares metadata.  During the <a href="https://arcticdc.org/meetings/conferences/polar-data-planning-summit">Polar Data Planning Summit</a> which was arranged May 22 - 24, 2018 in Boulder, Colorado, USA, an effort was initiated to map the ecosystem of Polar data centres and how these interacted exchanging discovery metadata.
 This effort was further elaborated in the <a href="https://arcticdc.org/meetings/conferences/polar-data-architecture-workshop">Polar Data and Systems Architecture Workshop</a> which was arranged November 28-30, 2018 in Geneva, Switzerland.
-These two meetings resulted in a spreadsheet describing interactions between data centres (i.e. who was harvesting information from whom), information which interoperability standards that were used etc.</p>
+These two meetings resulted in a spreadsheet describing metadata sharing interactions between data centres (i.e. who was harvesting information from whom), information which interoperability standards that were used etc.</p>
 </div>
 <div class="paragraph">
 <p>This spreadsheet has since been developed in the joint working group on <a href="https://arcticdc.org/activities/core-projects/federated-search">Federated Search for Polar Regions</a> and in joint the <a href="https://arcticdc.org/activities/core-projects/vocabularies-and-semantics-wg">Polar Semantics Working Group</a>.
@@ -531,7 +528,7 @@ In the process of establishing this data model it has been decided that the cont
 <div class="content">
 <img src="illustrations/mpde-screenshot.png" alt="mpde screenshot">
 </div>
-<div class="title">Figure 1. Screenshot of the current version of Mapping the Polar Data Ecosystem (MPDE) application.</div>
+<div class="title">Figure 1. Screenshot of the second version of Mapping the Polar Data Ecosystem (MPDE) application. The third version is now available at <a href="https://mpde.gcrc.carleton.ca" class="bare">https://mpde.gcrc.carleton.ca</a></div>
 </div>
 </div>
 <div class="sect2">
@@ -709,7 +706,7 @@ The information provided for this element is the same as for the <code>aggregato
 <div id="footer">
 <div id="footer-text">
 Version 0.0<br>
-Last updated 2023-02-16 21:14:24 UTC
+Last updated 2023-06-13 18:11:29 UTC
 </div>
 </div>
 </body>
