@@ -62,7 +62,7 @@ This data model should support a wide variety of use cases as well as also suppo
 In the process of establishing this data model it has been decided that the content should be available under CC-BY-4.0 license.
 
 [[mpde-mapping]]
-.Screenshot of the current version of Mapping the Polar Data Ecosystem (MPDE) application.
+.Screenshot of the second version of Mapping the Polar Data Ecosystem (MPDE) application. The third version is now available at https://mpde.gcrc.carleton.ca 
 image::illustrations/mpde-screenshot.png[]
 
 [[scope]]
