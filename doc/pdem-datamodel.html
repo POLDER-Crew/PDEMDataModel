@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.20">
-<meta name="author" content="Date: 2023-06-13">
+<meta name="author" content="Date: 2023-09-24">
 <title>Polar Data Ecosystem Mapping Data Model</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
@@ -438,16 +438,62 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="header">
 <h1>Polar Data Ecosystem Mapping Data Model</h1>
 <div class="details">
-<span id="author" class="author">Date: 2023-06-13</span><br>
-<span id="revnumber">version 0.0,</span>
-<span id="revdate">2023-06-13</span>
-<br><span id="revremark">First version</span>
+<span id="author" class="author">Date: 2023-09-24</span><br>
+<span id="revnumber">version 0.2,</span>
+<span id="revdate">2023-09-24</span>
+<br><span id="revremark">First public version</span>
 </div>
 </div>
 <div id="content">
 <div id="preamble">
 <div class="sectionbody">
 <div style="page-break-after: always;"></div>
+<div style="page-break-after: always;"></div>
+<div class="paragraph">
+<p>This work is released under the Creative Commons Attribution 4.0 License. To view a copy of the license, visit <a href="https://creativecommons.org/licenses/by/4.0/" class="bare">https://creativecommons.org/licenses/by/4.0/</a>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="pictures/ccby.png" alt="ccby">
+</div>
+</div>
+<h2 id="_versions" class="discrete">Versions</h2>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 50%;">
+<col style="width: 16.6668%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Version</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Date</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comment</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Responsible</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2023-09-24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">First public version</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Øystein Godøy</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2023-02-16</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">First consolidated draft.</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Øystein Godøy, Brendan Billingsley</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2022-10-18</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">First draft for internal discussion.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Øystein Godøy</p></td>
+</tr>
+</tbody>
+</table>
 <div style="page-break-after: always;"></div>
 <div id="toc" class="toc">
 <div id="toctitle" class="title">Table of Contents</div>
@@ -467,38 +513,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </div>
-<div style="page-break-after: always;"></div>
-<h2 id="_versions" class="discrete">Versions</h2>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 16.6666%;">
-<col style="width: 50%;">
-<col style="width: 16.6668%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">Version</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Date</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Comment</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Responsible</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">0.1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2023-02-16</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">First consolidated draft.</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Øystein Godøy, Brendan Billingsley</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">0.0</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2022-10-18</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">First draft for internal discussion.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Øystein Godøy</p></td>
-</tr>
-</tbody>
-</table>
 <div style="page-break-after: always;"></div>
 </div>
 </div>
@@ -522,7 +536,7 @@ This application has evolved through a number of projects and now is in the prog
 As the number of use cases have increased and the spreadsheet has grown in size it has become evident that managing this information in a spreadsheet is not sustainable.
 In order to have a solid basis for further development of the mapping activity and furthermore to move maintenance of information into a suitable system, it was decided to develop a data model for the application.
 This data model should support a wide variety of use cases as well as also support efficient and transparent maintenance of the information collected.
-In the process of establishing this data model it has been decided that the content should be available under CC-BY-4.0 license.</p>
+In the process of establishing this data model it has been decided that the content of the mapping activity also shall be available under a CC-BY-4.0 license.</p>
 </div>
 <div id="mpde-mapping" class="imageblock">
 <div class="content">
@@ -705,8 +719,8 @@ The information provided for this element is the same as for the <code>aggregato
 </div>
 <div id="footer">
 <div id="footer-text">
-Version 0.0<br>
-Last updated 2023-06-13 18:11:29 UTC
+Version 0.2<br>
+Last updated 2023-09-24 18:57:05 UTC
 </div>
 </div>
 </body>
