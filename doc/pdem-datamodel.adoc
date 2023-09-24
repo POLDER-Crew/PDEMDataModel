@@ -8,9 +8,9 @@
 :toclevels: 7
 :chapter-label:
 :xrefstyle: short
-:revnumber: 0.0
+:revnumber: 0.2
 :revdate: {docdate}
-:revremark: First version
+:revremark: First public version
 :title-page:
 
 = Polar Data Ecosystem Mapping Data Model
@@ -21,10 +21,9 @@ Date: {docdate}
 :title-page:
 
 <<<
+This work is released under the Creative Commons Attribution 4.0 License. To view a copy of the license, visit https://creativecommons.org/licenses/by/4.0/. 
 
-toc::[]
-
-<<<
+image::pictures/ccby.png[]
 
 [discrete]
 == Versions
@@ -32,9 +31,14 @@ toc::[]
 [cols="^1,1,3,1",]
 |=======================================================================
 |Version |Date |Comment |Responsible
+|0.2 |2023-09-24|First public version|Øystein Godøy
 |0.1 |2023-02-16|First consolidated draft. a| Øystein Godøy, Brendan Billingsley
 |0.0 |2022-10-18|First draft for internal discussion. |Øystein Godøy
 |=======================================================================
+
+<<<
+
+toc::[]
 
 <<<
 
@@ -59,7 +63,7 @@ As the number of use cases have increased and the spreadsheet has grown in size 
 In order to have a solid basis for further development of the mapping activity and furthermore to move maintenance of information into a suitable system, it was decided to develop a data model for the application. 
 This data model should support a wide variety of use cases as well as also support efficient and transparent maintenance of the information collected.
 // Need to double check that this was the case, was open at least...
-In the process of establishing this data model it has been decided that the content should be available under CC-BY-4.0 license.
+In the process of establishing this data model it has been decided that the content of the mapping activity also shall be available under a CC-BY-4.0 license.
 
 [[mpde-mapping]]
 .Screenshot of the second version of Mapping the Polar Data Ecosystem (MPDE) application. The third version is now available at https://mpde.gcrc.carleton.ca 
