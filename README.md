@@ -5,7 +5,7 @@
 This repository contains the data model for the Polar Data Ecosystem Mapping exc
 ercise, initially called the Arctic Data Ecosystem Mapping which started during the first meeting of the Arctic Data Committee in Novermber of 2014.  
 
-Initially all data related to the POLDER component of the project was included in spreadsheets, but this information has been transferred into a graph and is supported by the application FIXME...
+Initially all data related to the POLDER component of the project was included in spreadsheets, but this information has been transferred into a graph and is supported by the application Mapping the Polar Data Ecosystem (MPDE) application.
 
 - [PDF](https://github.com/POLDER-Crew/PDEMDataModel/blob/main/doc/pdem-datamodel.pdf)
 - [HTML](https://htmlpreview.github.io/?https://raw.githubusercontent.com/POLDER-Crew/PDEMDataModel/main/doc/pdem-datamodel.html?token=GHSAT0AAAAAABZBYS7CSLY7RSYAK6VIXB6EY7PSUIQ)
