@@ -21,9 +21,12 @@ Date: {docdate}
 :title-page:
 
 <<<
+image:pictures/ccby.png[]
 This work is released under the Creative Commons Attribution 4.0 License. To view a copy of the license, visit https://creativecommons.org/licenses/by/4.0/. 
 
-image::pictures/ccby.png[]
+image:pictures/eu_logo.jpg[width=75]
+image:pictures/eupolarcluster.png[width=75]
+This work has been supported by the Arctic PASSION project which has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No. 101003472
 
 [discrete]
 == Versions
@@ -35,6 +38,7 @@ image::pictures/ccby.png[]
 |0.1 |2023-02-16|First consolidated draft. a| Øystein Godøy, Brendan Billingsley
 |0.0 |2022-10-18|First draft for internal discussion. |Øystein Godøy
 |=======================================================================
+
 
 <<<
 
