@@ -26,7 +26,7 @@ This work is released under the Creative Commons Attribution 4.0 License. To vie
 
 image:pictures/eu_logo.jpg[width=75]
 image:pictures/eupolarcluster.png[width=75]
-This work has been supported by the Arctic PASSION project which has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No. 101003472
+This work has been supported by the Arctic PASSION project which has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No. 101003472.
 
 [discrete]
 == Versions
