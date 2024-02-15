@@ -8,9 +8,9 @@
 :toclevels: 7
 :chapter-label:
 :xrefstyle: short
-:revnumber: 1.0
+:revnumber: 1.1
 :revdate: {docdate}
-:revremark: First public version
+:revremark: Use Cases for application added
 :title-page:
 
 = Polar Data Ecosystem Mapping Data Model
@@ -37,6 +37,7 @@ This work has been supported by the Arctic PASSION project which has received fu
 [cols="^1,1,3,1",]
 |=======================================================================
 |Version |Date |Comment |Responsible
+|{revnumber} |{docdate}|Added use cases for development of application|Øystein Godøy, Jan Rene Larsen, ...
 |1.0 |2023-09-24|First public version|Øystein Godøy
 |0.1 |2023-02-16|First consolidated draft. a| Øystein Godøy, Brendan Billingsley
 |0.0 |2022-10-18|First draft for internal discussion. |Øystein Godøy
@@ -177,3 +178,103 @@ image::diagrams/ArcticDataMapping.png[]
 
 [.portrait]
 <<<
+
+== Use Cases
+
+=== Introduction
+The purpose of this section is to provide use cases that supports development of the https://mdpe.gcrc.carleton.ca[Mapping the Polar Data Ecosystem] (MPDE) application.
+Initially the focus is on use cases helping the community to maintain and improve the content of the application while in the longer term it will contain descriptions focusing on utilising the application for specific purposes.
+
+=== Specific use cases
+
+[[ucmpdemanagement]]
+.How to manage the MPDE.
+[cols=">1h,4"]
+|===
+|Name
+a|Management of the MPDE recors and users.
+
+|Goal
+a|To enable selected MPDE editors to manage users and data centres in the MPDE application. 
+This has to be a controlled process in order to maintain a consistent list of data centres and their relations.
+
+|Actors
+a|
+* MPDE editor
+* MPDE system manager
+* Data centre responsible
+
+|Pre-conditions
+a|
+. The MPDE system manager has access to configuration of the MPDE
+. The MPDE editor has access to configuration of users and data centres in the MPDE
+
+|Post-conditions
+a|
+. The MPDE editor has enabled a data centre responsible to edit records for a specific data centre.
+. The MPDE editor has approved/modified requests for new data centres to be added to the system.
+
+|Normal flow
+a|
+. A user requests to become responsible for a specific data centre.
+. The MPDE editor approves or rejects the request.
+. The data centre responsible requests a relation to a new data centre be established. This is approved or rejected by an MPDE editor.
+
+|Notes and issues
+a|
+. New data centres has to be approved by an MPDE editor.
+This also holds for data centres that are added by existing data centre responsible that need to set up new relations.
+. MPDE editors are approved by MPDE system manager.
+
+|Last updated
+a|FIXME
+
+|Last updated by
+a|FIXME
+|===
+
+[[ucmanaginginfo]]
+.How to manage information in MDPE.
+[cols=">1h,4",]
+|===
+
+|Name
+a|Management of information in the MPDE application
+
+|Goal
+a| To enable responsible and authorised users to add and maintain information on data centers and their relations in the MPDE application.
+This implies adding a new data centre, setting up relations to existing data centres and adding new data centres previously not listed.
+
+|Actors
+a|
+* Responsible for a data centre
+* MPDE editor
+
+|Pre-conditions
+a|
+. The data centre responsible have an account in the MPDE application.
+. The data centre responsible is authorised to edit records for a specific data centre.
+
+|Post-conditions
+a|
+. The data centre record is updated with existing and new relations and interfaces.
+
+|Normal flow
+a|
+. The data center responsible authenticates and is authorised to edit records for a specific data centre.
+. Existing relations are modified as necessary through modification of technical interfaces etc.
+. Potential new relations are added, but integration is pending approval of an MPDE editor.
+. Once new additions are approved the new records are fully integrated and visible for everyone.
+
+|Notes and issues
+a|
+. New data centres has to be approved by an MPDE editor to ensure consistent naming conventions/controlled vocabularies.
+. Relations between data centres should in the mid to long term be drag and drop relations, but in the short term a tabular overview/edit would be sufficient.
+
+|Last updated
+| FIXME
+
+|Last updated by
+| FIXME
+
+|===
