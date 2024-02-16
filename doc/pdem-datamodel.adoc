@@ -227,10 +227,10 @@ This also holds for data centres that are added by existing data centre responsi
 . MPDE editors are approved by MPDE system manager.
 
 |Last updated
-a|FIXME
+a|2024-02-16
 
 |Last updated by
-a|FIXME
+a| Øystein Godøy
 |===
 
 [[ucmanaginginfo]]
@@ -269,12 +269,14 @@ a|
 |Notes and issues
 a|
 . New data centres has to be approved by an MPDE editor to ensure consistent naming conventions/controlled vocabularies.
+. New data centres that are added should be notified that they have been added and asked whether they want to maintain their own information onwards. 
+If not these records would be owned by the MPDE editor or the original requestor (to be decided).
 . Relations between data centres should in the mid to long term be drag and drop relations, but in the short term a tabular overview/edit would be sufficient.
 
 |Last updated
-| FIXME
+| 2024-02-16
 
 |Last updated by
-| FIXME
+| Øystein Godøy
 
 |===
